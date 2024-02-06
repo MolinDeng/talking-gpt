@@ -52,7 +52,6 @@ const sendTextToOpenAi = async (userText: string): Promise<string> => {
 // };
 
 export const TextToSpeech = () => {
-  const textareaRef = useRef<HTMLTextAreaElement>(null);
   const [userText, setUserText] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const { isPlaying, setIsPlaying } = useContext(AppContext);
@@ -63,7 +62,7 @@ export const TextToSpeech = () => {
 
   const speak = (textToSpeak: string) => {
     const utterance = new SpeechSynthesisUtterance(textToSpeak);
-    utterance.rate = 0.8;
+    // utterance.rate = 0.8;
     utterance.voice = seletedVoice!;
 
     synth?.speak(utterance);

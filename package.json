@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",
+    "@react-three/drei": "^9.97.3",
+    "@react-three/fiber": "^8.15.16",
     "axios": "^1.6.7",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
@@ -21,7 +23,8 @@
     "react-dom": "^18",
     "speaker": "^0.5.4",
     "tailwind-merge": "^2.2.1",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "three": "^0.161.0"
   },
   "devDependencies": {
     "@types/fluent-ffmpeg": "^2.1.24",
