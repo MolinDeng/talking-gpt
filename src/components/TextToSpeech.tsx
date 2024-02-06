@@ -96,37 +96,28 @@ export const TextToSpeech = () => {
   }
 
   return (
-    <div className="relative min-h-full">
-      <div className="absolute bottom-0 left-0 w-full">
-        <div className="mx-2 flex flex-row gap-3 md:mx-4 md:last:mb-6 lg:mx-auto lg:max-w-2xl">
-          <div className="relative flex h-full flex-1 items-stretch md:flex-col">
-            <div className="relative flex flex-col w-full flex-grow">
-              <div className="relative">
-                <form onSubmit={handleUserText} className="space-x-2 flex">
-                  <input
-                    type="text"
-                    value={userText}
-                    className="bg-transparent w-full border border-[#b00c3f]/80 outline-none rounded-lg placeholder:text-[#b00c3f] p-2 text-[#b00c3f]"
-                    onChange={(e) => setUserText(e.target.value)}
-                    placeholder="It's your turn...."
-                  />
-                  <button
-                    disabled={isLoading}
-                    className="text-[#b00c3f] my-auto p-2 disabled:text-blue-100 disabled:cursor-not-allowedhover:scale-110 hover:bg-[#b00c3f] hover:text-black duration-300 transition-all"
-                  >
-                    {/* {isLoading ? 'thinking...' : 'Ask'} */}
-                    {isLoading ? (
-                      <Loader2 className="h-5 w-5 animate-spin" />
-                    ) : (
-                      <Send className="h-5 w-5" />
-                    )}
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    // I want this form to be centered at the bottom of the page, help me write
+    <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 lg:w-1/2 md:w-4/5 w-full">
+      <form onSubmit={handleUserText} className="space-x-2 flex">
+        <input
+          type="text"
+          value={userText}
+          className="bg-transparent w-full border border-[#b00c3f]/80 outline-none rounded-lg placeholder:text-[#b00c3f] p-2 text-[#b00c3f]"
+          onChange={(e) => setUserText(e.target.value)}
+          placeholder="It's your turn...."
+        />
+        <button
+          disabled={isLoading}
+          className="text-[#b00c3f] my-auto p-2 mr-2 disabled:text-blue-100 disabled:cursor-not-allowedhover:scale-110 hover:bg-[#b00c3f] hover:text-black duration-300 transition-all"
+        >
+          {/* {isLoading ? 'thinking...' : 'Ask'} */}
+          {isLoading ? (
+            <Loader2 className="h-6 w-6 animate-spin" />
+          ) : (
+            <Send className="h-6 w-6" />
+          )}
+        </button>
+      </form>
     </div>
   );
 };
