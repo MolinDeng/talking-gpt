@@ -48,7 +48,7 @@ const Torch = ({ vec = new Vector3(), ...props }) => {
 //Resource to Head : https://sketchfab.com/3d-models/blender-sushi-virtual-journal-16th-april-2020-634af2ae983f4fb8a9295e6b1b3d5c74
 const Head = () => {
   const { isPlaying, setIsPlaying } = useContext(AppContext);
-  const { nodes, materials, animations, scene } = useGLTF('/head2.glb');
+  const { nodes, materials, animations, scene } = useGLTF('/head.glb');
   const { actions } = useAnimations(animations, scene);
   const action = actions.Animation;
   useEffect(() => {
@@ -62,13 +62,7 @@ const Head = () => {
     }
   }, [isPlaying, action]);
   return (
-    <primitive
-      object={scene}
-      scale={15}
-      rotation-x={0.2}
-      rotation-y={0.2}
-      // rotation-z={0.2}
-    />
+    <primitive color={'white'} object={scene} scale={3} rotation-z={0.2} />
   );
 };
 

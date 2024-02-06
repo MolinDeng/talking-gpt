@@ -9,10 +9,10 @@ export default function Home() {
         <ChatBotCanvas />
         <TextToSpeech />
       </IsPlayingProvider>
-      <div className="inline absolute bottom-0 left-0 m-2">
+      <div className="inline absolute bottom-0 left-0 m-2 text-[#b00c3f]">
         By{' '}
         <a
-          className="underline"
+          className="underline text-blue-700"
           href="https://molin7.vercel.app/"
           target="_blank"
         >
@@ -21,7 +21,7 @@ export default function Home() {
         <br />
         View source on{' '}
         <a
-          className="underline"
+          className="underline text-blue-700"
           href="https://github.com/MolinDeng/talking-gpt"
           target="_blank"
         >

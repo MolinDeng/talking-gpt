@@ -95,7 +95,6 @@ export const TextToSpeech = () => {
   }
 
   return (
-    // I want this form to be centered at the bottom of the page, help me write
     <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 lg:w-1/2 md:w-4/5 w-full">
       <form onSubmit={handleUserText} className="space-x-2 flex">
         <input
@@ -109,7 +108,6 @@ export const TextToSpeech = () => {
           disabled={isLoading}
           className="text-[#b00c3f] my-auto p-2 mr-2 disabled:text-blue-100 disabled:cursor-not-allowedhover:scale-110 hover:bg-[#b00c3f] hover:text-black duration-300 transition-all"
         >
-          {/* {isLoading ? 'thinking...' : 'Ask'} */}
           {isLoading ? (
             <Loader2 className="h-6 w-6 animate-spin" />
           ) : (
