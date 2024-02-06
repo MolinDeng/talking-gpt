@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <main className="h-screen">
       <IsPlayingProvider>
-        <TextToSpeech />
         <ChatBotCanvas />
+        <TextToSpeech />
       </IsPlayingProvider>
     </main>
   );
